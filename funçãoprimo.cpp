@@ -7,7 +7,7 @@ bool primo (int n){
 
     for(int i = 2; i < n; i++){ // vai procurar um divisor de 2 até n-1
 
-        if(n % i == 0){ // se n 
+        if(n % i == 0){ 
             return false;
         }
     }
