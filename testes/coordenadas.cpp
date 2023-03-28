@@ -6,7 +6,7 @@ using namespace std;
 
 /* Crie uma estrutura para representar as coordenadas de um ponto no plano
 (posic ̧ ̃oes X e Y). Em seguida, declare e leia do teclado um ponto e exiba
-a distˆancia dele at ́e a origem das coordenadas, isto  ́e, a posic ̧ ̃ao (0,0).*/
+a distˆancia dele at ́e a origem das coordenadas, isto  ́e, a posição (0,0).*/
 struct Coordenada {
     float y;
     float x;
