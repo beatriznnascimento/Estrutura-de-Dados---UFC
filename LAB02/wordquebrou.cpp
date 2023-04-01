@@ -1,15 +1,47 @@
 #include <iostream>
+#include <string>
+
 using namespace std;
 
-int main(){
+int main()
+{
 
-  char frase[100];
-    char form;
-    for(int i = 0; i < 100; i++){  
-        cin >> frase[i]; // recebe a frase
-        cin >> form;
+    string frase;
+    getline(cin, frase);
+    char tipoForm;
+    cin >> tipoForm;
 
-       // if(frase[i] == "")
+    for (int i = 0; i < frase.size(); i++)
+    { // vai iterar de acordo com o tamanho da string
+
+        if (frase[i] >= 'a' && frase[i] <= 'z' && tipoForm == 'M')
+        { // se minuscula, transforma em maiuscula
+            frase[i] -= 32;
+        }
+        else if (frase[i] >= 'A' && frase[i] <= 'Z' && tipoForm == 'm')
+        { // maiuscula, transforma em min
+            frase[i] += 32;
+        }
+        else if (tipoForm == 'i')
+        {
+            if (frase[i] >= 'a' && frase[i] <= 'z')
+            {
+                frase[i] -= 32;
+            }
+            else if (frase[i] >= 'A' && frase[i] <= 'Z')
+            {
+                frase[i] += 32;
+            }
+        }
+        else if (tipoForm == 'p')
+        {
+            if (i == 0 && frase[i + 1] == ' ')
+                frase[i] += 32;
+            if (frase[i - 1] == ' ' && frase[i + 1] != ' ')
+                if (frase[i] >= 'a' && frase[i] <= 'z')
+                    frase[i] -= 32;
+        }
+
+        cout << frase[i];
     }
-
 }
