@@ -3,7 +3,7 @@ using namespace std;
 
 int main(){
     int x {32};
-    int *ptr { &x }; // declara um pont
+    int *ptr { &x }; // declara um pont valor apontado
 
     cout << x << endl; //32
     cout << *ptr << endl; //32
